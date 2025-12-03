@@ -1,0 +1,9 @@
+{
+  "host": "localhost",
+  "user": "root",
+  "password": "Business12",
+  "database": "kirjakauppa",
+  "waitForConnections": true,
+  "connectionLimit": 10,
+  "queueLimit": 0
+}

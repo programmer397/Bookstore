@@ -1,0 +1,13 @@
+#kirjat {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 40px;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}

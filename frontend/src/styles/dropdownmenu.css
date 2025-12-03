@@ -1,0 +1,30 @@
+#dropDownMenu {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  background-color: white;
+  min-width: 100px;
+  border: solid 2px black;
+  border-radius: 10px;
+  z-index: 10;
+}
+#dropDownMenu ul {
+  list-style-type: none;
+  padding: 5px;
+}
+#dropDownMenu ul li {
+  width: 100%;
+  cursor: pointer;
+  padding: 3px 0 3px 5px;
+}
+#dropDownMenu ul li:hover {
+  background-color: lightgray;
+}
+#profileimg {
+  width: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+#profileimg:hover {
+  background-color: grey;
+}

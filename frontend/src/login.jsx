@@ -1,7 +1,6 @@
 import { useState, useContext } from "react";
 import { apiLogin } from "./api/apiAuth.js";
 import { useNavigate } from "react-router-dom";
-import { apiLogout } from "./api/apiAuth.js";
 import { Authcontext } from "./authContext.jsx";
 
 export default function authority() {
@@ -33,20 +32,6 @@ export default function authority() {
     }
   };
 
-  const guest = async () => {
-    try {
-      await apiLogout();
-      setAuth({
-        loggedin: false,
-        user: null,
-        loading: false,
-      });
-    } catch (err) {
-      console.error("Guest logout error:", err);
-    }
-
-    navigate("/home");
-  };
   return (
     <div>
       <form id="formlogin" onSubmit={handleSubmit}>
@@ -63,7 +48,7 @@ export default function authority() {
           </label>
           <input type="password" name="password" id="password" placeholder="Enter Password" required />
 
-          <p id="message"></p>
+          <div id="message">{error && <p>???????????????</p>}</div>
 
           <button id="kirjaudu" type="submit">
             Log in
@@ -73,10 +58,6 @@ export default function authority() {
         <div className="container">
           <button type="button" className="button2" onClick={() => navigate("/signup")}>
             Create account
-          </button>
-
-          <button id="quest" type="button" className="button2" onClick={guest}>
-            Continue as guest
           </button>
         </div>
       </form>

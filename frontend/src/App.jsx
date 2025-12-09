@@ -8,7 +8,6 @@ import Login from "./login.jsx";
 import Signup from "./signup.jsx";
 import Profile from "./profile.jsx";
 import MainLayout from "./components/mainLayout.jsx";
-import AuthLayout from "./components/authLayout.jsx";
 import { getBooks } from "./api/apiBooks.js";
 import { useState, useEffect } from "react";
 
@@ -97,20 +96,20 @@ export default function App() {
           <Route
             path="/signup"
             element={
-              <AuthLayout>
+              <MainLayout>
                 <Signup />
-              </AuthLayout>
+              </MainLayout>
             }
           />
           <Route
             path="/login"
             element={
-              <AuthLayout>
+              <MainLayout>
                 <Login />
-              </AuthLayout>
+              </MainLayout>
             }
           />
-          <Route path="/" element={<Navigate to="/login" />} />
+          <Route path="/" element={<Navigate to="/home" />} />
         </Routes>
       </div>
     </BrowserRouter>

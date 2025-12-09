@@ -1,12 +1,66 @@
 #introduction {
-  height: 700px;
+  height: 300px;
 }
-.carousel {
+.carousel-wrapper {
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px 0;
-  max-width: 1000px;
+  cursor: pointer;
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right, #31055d 0%, #2a0845 51%, #120132 100%);
+}
+.btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #260256;
+  border-radius: 10px;
+  display: block;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.carousel-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background: black;
+  padding: 10px 20px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  background: radial-gradient(circle, rgba(82, 6, 153, 0.5) 20%, rgba(82, 6, 153, 1) 96%);
+}
+
+.carousel {
+  border-radius: 20px;
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
   overflow: hidden;
   display: flex;
+  background-color: black;
 }
 
 .card {
@@ -30,10 +84,11 @@
   gap: 20px;
   padding-right: 20px;
   will-change: transform;
-  animation: scrolling 40s linear infinite;
+  animation: scrolling 80s linear infinite;
   transition: animation-duration 1s ease;
   white-space: nowrap;
 }
+
 h2 {
   font-size: 30px;
 }

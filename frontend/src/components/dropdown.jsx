@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import "../styles/dropdownmenu.css";
+import "../styles/dropdown.css";
 import { Link } from "react-router-dom";
 import { apiLogout } from "../api/apiAuth.js";
 
@@ -24,6 +24,9 @@ export default function Dropdownmenu() {
       <img id="profileimg" src="/kuvat/user.svg" alt="Profiili" onClick={() => setOpen(!open)} />
       {open && (
         <div id="dropDownMenu">
+          <div>
+            <img src="/kuvat/user.svg" alt="user" width={40} />
+          </div>
           <ul>
             <li>
               <Link to="/profile">Profile</Link>

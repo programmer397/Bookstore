@@ -9,143 +9,14 @@ html {
 html,
 body {
   height: 100%;
-  padding: 10px;
 }
 :root {
-  --c1: #ccd5ae;
-  --c2: #e9edc9;
-  --c3: #fefae0;
-  --c4: #faedcd;
-  --c5: #d4a373;
-}
-header {
-  background-color: white;
-  border: solid 2px black;
-  padding: 10px;
-  border-radius: 40px;
+  --white: white;
+  --purple: rgb(82, 6, 153);
+  --lightpurple: rgb(227, 127, 227);
+  --red: rgb(194, 4, 4);
 }
 body {
   color: black;
-  background-color: rgb(209, 255, 204);
+  background-color: white;
 }
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.page-links {
-  display: flex;
-  gap: 40px;
-  margin-left: 10px;
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.nav-link {
-  position: relative;
-  display: inline-block;
-}
-
-.nav-link::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0%;
-  background-color: black;
-  transition: width 0.3s ease;
-}
-.nav-link:hover::after {
-  width: 100%;
-}
-
-
-/*Backup
-.nav-icon {
-  position: relative;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  margin-right: 15px;
-}
-
-.nav-icon span {
-  position: absolute;
-  width: 50%;
-  height: 3px;
-  background: #2a1929;
-  transition: all 0.2s ease-in-out;
-}
-
-.nav-icon span:nth-child(odd) {
-  left: 0;
-  border-radius: 9px 0 0 9px;
-}
-.nav-icon span:nth-child(even) {
-  left: 50%;
-  border-radius: 0 9px 9px 0;
-}
-.nav-icon span:nth-child(1),
-.nav-icon span:nth-child(2) {
-  top: 0;
-}
-
-.nav-icon span:nth-child(3),
-.nav-icon span:nth-child(4) {
-  top: 10px;
-}
-
-.nav-icon span:nth-child(5),
-.nav-icon span:nth-child(6) {
-  top: 20px;
-}
-
-.nav-open .nav-icon span:nth-child(1),
-.nav-open .nav-icon span:nth-child(6) {
-  transform: rotate(45deg);
-}
-
-.nav-open .nav-icon span:nth-child(2),
-.nav-open .nav-icon span:nth-child(5) {
-  transform: rotate(-45deg);
-}
-
-.nav-open .nav-icon span:nth-child(1) {
-  top: 6px;
-  left: 2.5px;
-}
-.nav-open .nav-icon span:nth-child(2) {
-  top: 6px;
-  left: calc(50% - 2.5px);
-}
-.nav-open .nav-icon span:nth-child(3) {
-  left: -100%;
-  opacity: 0;
-}
-.nav-open .nav-icon span:nth-child(4) {
-  left: 150%;
-  opacity: 0;
-}
-.nav-open .nav-icon span:nth-child(5) {
-  top: 17px;
-  left: 2.5px;
-}
-.nav-open .nav-icon span:nth-child(6) {
-  top: 17px;
-  left: calc(50% - 2.5px);
-}
-
-    <div className="nav-icon" onClick={toggleNav}>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-/*

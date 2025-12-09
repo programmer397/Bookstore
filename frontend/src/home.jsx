@@ -1,10 +1,15 @@
 import "./styles/home.css";
+
+import { useNavigate } from "react-router-dom";
+
 let Home = () => {
+  const navigate = useNavigate();
   //Hover hidastus
+
   const handleMouseEnter = () => {
     document.querySelectorAll(".group").forEach((group) => {
       const anim = group.getAnimations()[0];
-      if (anim) anim.playbackRate = 0.5;
+      if (anim) anim.playbackRate = 0.0;
     });
   };
 
@@ -33,20 +38,29 @@ let Home = () => {
           </div>
         </div>
         <div>
-          <div className="carousel" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <div className="group">
-              <img src="/kuvat/cherry.webp" alt="" className="card" />
-              <img src="/kuvat/detective.jpg" alt="" className="card" />
-              <img src="/kuvat/fire.jpg" alt="" className="card" />
-              <img src="/kuvat/ice.jpg" alt="" className="card" />
-              <img src="/kuvat/war.jpg" alt="" className="card" />
-            </div>
-            <div aria-hidden className="group">
-              <img src="/kuvat/cherry.webp" alt="" className="card" />
-              <img src="/kuvat/detective.jpg" alt="" className="card" />
-              <img src="/kuvat/fire.jpg" alt="" className="card" />
-              <img src="/kuvat/ice.jpg" alt="" className="card" />
-              <img src="/kuvat/war.jpg" alt="" className="card" />
+          <div className="carousel-wrapper" onClick={() => navigate("/books")}>
+            <div className="carousel" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <div className="group">
+                <img src="/kuvat/cherry.webp" alt="" className="card" />
+                <img src="/kuvat/detective.jpg" alt="" className="card" />
+                <img src="/kuvat/fire.jpg" alt="" className="card" />
+                <img src="/kuvat/ice.jpg" alt="" className="card" />
+                <img src="/kuvat/war.jpg" alt="" className="card" />
+                <img src="/kuvat/fire.jpg" alt="" className="card" />
+              </div>
+              <div aria-hidden className="group">
+                <img src="/kuvat/cherry.webp" alt="" className="card" />
+                <img src="/kuvat/detective.jpg" alt="" className="card" />
+                <img src="/kuvat/fire.jpg" alt="" className="card" />
+                <img src="/kuvat/ice.jpg" alt="" className="card" />
+                <img src="/kuvat/war.jpg" alt="" className="card" />
+                <img src="/kuvat/fire.jpg" alt="" className="card" />
+              </div>
+              <div className="carousel-text-container">
+                <button type="button" className="btn-grad">
+                  Check all of our books here!
+                </button>
+              </div>
             </div>
           </div>
         </div>
